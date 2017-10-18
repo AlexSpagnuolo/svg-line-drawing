@@ -5,59 +5,62 @@ html {
 .title {
   z-index: 2;
   color: white;
+  animation: text-appear .5s linear forwards;
+  animation-delay: .5s;
+  opacity: 0;
 }
 
 #rainbow-red {
-  animation: red 1s linear alternate;
+  animation: red 2s linear forwards;
   stroke-dasharray: 1244px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-orange {
-  animation: orange 1s linear alternate;
+  animation: orange 2s linear forwards;
   stroke-dasharray: 1367px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-yellow {
-  animation: yellow 1s linear alternate;
+  animation: yellow 2s linear forwards;
   stroke-dasharray: 1484px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-green {
-  animation: green 1s linear alternate;
+  animation: green 2s linear forwards;
   stroke-dasharray: 1597px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-blue {
-  animation: blue 1s linear alternate;
+  animation: blue 2s linear forwards;
   stroke-dasharray: 1706px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-indigo {
-  animation: indigo 1s linear alternate;
+  animation: indigo 2s linear forwards;
   stroke-dasharray: 1813px;
   stroke-dashoffset: 0;
 }
 
 #rainbow-violet {
-  animation: violet 1s linear alternate;
+  animation: violet 2s linear forwards;
   stroke-dasharray: 1918px;
   stroke-dashoffset: 0;
 }
 
 #narwhal-body {
-  animation: body .5s linear alternate;
+  animation: body 1s linear forwards;
   stroke-dasharray: 1982px;
   stroke-dashoffset: 0;
 }
 
 #narwhal-eye {
-  animation: eye 1s linear alternate;
-  animation-delay: .5s;
+  animation: eye 1s linear forwards;
+  animation-delay: 1s;
   opacity: 0;
 }
 
@@ -159,8 +162,28 @@ html {
 
 @keyframes eye {
 
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
   100% {
     opacity: 100;
+    filter: blur(0);
+  }
+
+}
+
+@keyframes text-appear {
+
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 100;
+    filter: blur(0);
   }
 
 }
